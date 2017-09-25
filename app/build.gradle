@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.example.dennis.mobilesensing_appganesha"
+        minSdkVersion 17
+        targetSdkVersion 26
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    maven { url "http://objectbox.net/beta-repo/" }
+}
+
+dependencies {
+    //compile project(':mobilesensing_module-release')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26.+'
+    //testCompile 'junit:junit:4.12'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.parse:parse-android:1.15.7'
+    compile 'com.android.support:multidex:1.0.1'
+    //Libaries for Modul
+    //compile files('libs/intel-context-sensing-1.8.0.1000.jar')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'io.objectbox:objectbox-android:0.9.13'
+    compile 'com.jaredrummler:android-processes:1.0.9'
+    compile 'com.baasbox:baasbox-android:0.9.0'
+    compile 'com.google.android.gms:play-services-location:11.0.4'
+    compile'com.android.support.constraint:constraint-layout:1.0.2'
+    //Modul
+    compile(name:'mobilesensing_module-release', ext:'aar')
+}

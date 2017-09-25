@@ -1,0 +1,1 @@
+include ':app', ':mobilesensing_module-release'
