@@ -13,9 +13,7 @@ import org.json.JSONObject;
 
 import de.dennis.mobilesensing_module.mobilesensing.EventBus.UploadEvent;
 import de.dennis.mobilesensing_module.mobilesensing.Module;
-import de.dennis.mobilesensing_module.mobilesensing.Storage.DataAdapter;
 import de.dennis.mobilesensing_module.mobilesensing.Storage.ObjectBox.SensorTimeseries;
-import de.dennis.mobilesensing_module.mobilesensing.Storage.ObjectBox.SensorValue;
 
 /**
  * Created by Dennis on 17.09.2017.
@@ -56,7 +54,7 @@ public class ParseUploader {
                           ]
               }
          */
-        ParseObject po = new ParseObject(st.getSensor_info().getSensor_name());
+       /* ParseObject po = new ParseObject(st.getSensor_info().getSensor_name());
         po.put("timestamp_day", st.getTimestamp_day());
         po.put("type",st.getType());
         po.put("sensor_id",st.getSensor_id());
@@ -76,7 +74,7 @@ public class ParseUploader {
         } catch (JSONException e){
 
         }
-        po.saveEventually(deleteSensorTimeseries(st));
+        po.saveEventually(deleteSensorTimeseries(st));*/
     }
 
     public SaveCallback deleteSensorTimeseries(final SensorTimeseries st){
@@ -84,8 +82,8 @@ public class ParseUploader {
             @Override
             public void done(ParseException e) {
                 if(e == null){
-                    DataAdapter da = new DataAdapter();
-                    da.deleteTimeseries(st.getTimestamp_day(),st.getSensor_info().getSensor_name());
+                    //DataAdapter da = new DataAdapter();
+                   // da.deleteTimeseries(st.getTimestamp_day(),st.getSensor_info().getSensor_name());
                 }else{
                     //TODO
                 }
