@@ -132,7 +132,7 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i = new Intent(Application.getContext(), MainActivity.class);
+        Intent i = new Intent(Application.getContext(), WebviewActivity.class);
         startActivity(i);
         finish();
     }

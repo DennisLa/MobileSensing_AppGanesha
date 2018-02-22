@@ -35,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
         btnTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(Application.getContext(), WebviewActivity.class);
+                startActivity(i);
+                finish();
             }
         });
         btnSettings = (ImageButton) findViewById(R.id.btnSettings);

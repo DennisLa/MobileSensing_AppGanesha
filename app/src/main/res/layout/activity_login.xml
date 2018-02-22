@@ -35,7 +35,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:textColor="#fff"
         android:id="@+id/btnLogin"
+        android:background="@drawable/roundbutton"
         android:layout_below="@+id/txtPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
@@ -43,10 +45,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/roundbutton"
+        android:textColor="#fff"
         android:text="Registrieren"
         android:id="@+id/btnRegister"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/btnLogin" />
 
     <Button
         android:layout_width="wrap_content"

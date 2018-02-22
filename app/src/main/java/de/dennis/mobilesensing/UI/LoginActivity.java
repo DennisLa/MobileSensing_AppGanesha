@@ -76,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.putString("Session",user.getSessionToken());
                                 editor.apply();
                                 mProgressDialog.dismiss();
-                                Intent i = new Intent(Application.getContext(), MainActivity.class);
+                                Intent i = new Intent(Application.getContext(), WebviewActivity.class);
                                 startActivity(i);
                                 finish();
                             } else {

@@ -29,18 +29,21 @@ repositories {
 dependencies {
     //compile project(':mobilesensing_module-release')
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:26.+'
     //testCompile 'junit:junit:4.12'
+    //Libaries for Modul
+    //compile files('libs/intel-context-sensing-1.8.0.1000.jar')
+    //Modul
+    compile(name: 'mobilesensing_module-release', ext: 'aar')
+    compile 'com.android.support:appcompat-v7:26.+'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.parse:parse-android:1.15.7'
     compile 'com.android.support:multidex:1.0.1'
-    //Libaries for Modul
-    //compile files('libs/intel-context-sensing-1.8.0.1000.jar')
     compile 'io.objectbox:objectbox-android:1.1.0'
     compile 'com.jaredrummler:android-processes:1.0.9'
     compile 'com.baasbox:baasbox-android:0.9.0'
     compile 'com.google.android.gms:play-services-location:11.0.4'
-    compile'com.android.support.constraint:constraint-layout:1.0.2'
-    //Modul
-    compile(name:'mobilesensing_module-release', ext:'aar')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
 }
